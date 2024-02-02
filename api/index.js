@@ -10,17 +10,18 @@ const app = express();
 app.use(cors(
     {
         origin: 'https://myproperty.vercel.app',
-    // origin: 'https://myproperty.vercel.app',
-  methods: ["POST", "GET", "PUT", "DELETE"],
-  credentials: true
-}
+        methods: ["POST", "GET", "PUT", "DELETE"],
+        credentials: true,
+    }
 ));
 
 
 app.use(express.json());
 app.use(cookieParser());
 
-
+app.use('/',(req,res)=>{
+    res.status(200).json({message:welcome})
+})
 
 //routes
 app.use('/api/user',userRouter);

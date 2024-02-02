@@ -19,9 +19,7 @@ app.use(cors(
 app.use(express.json());
 app.use(cookieParser());
 
-app.use('/',(req,res)=>{
-    res.status(200).json({message:"welcome"})
-})
+
 
 //routes
 app.use('/api/user',userRouter);

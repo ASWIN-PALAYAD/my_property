@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use('/',(req,res)=>{
-    res.status(200).json({message:welcome})
+    res.status(200).json({message:"welcome"})
 })
 
 //routes
